@@ -1,30 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/cegepst/tp-3-modal-Exynoes/dist/modal.css">
-    <title>Document</title>
+    <title>Test Librairie Modal</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Exynoes/modal-lib/dist/modal.css">
+    <script type="module" src="index.js"></script>
 </head>
 <body>
-    <script type="module">
-    import {
-        ModalAlert,
-        ModalConfirm,
-        ModalAjax,
-        ModalCustom
-    } from "https://cdn.jsdelivr.net/gh/cegepst/tp-3-modal-Exynoes/dist/index.js";
+    <h1>Test de la librairie Modal</h1>
 
-    document.getElementById("test").addEventListener("click", () => {
-        new ModalAlert({
-            title: "Test",
-            message: "Ta librairie fonctionne !",
-            okText: "OK",
-            onOk: () => console.log("OK pressé")
-        }).open();
-    });
-</script>
-
-<button id="test">Tester modal</button>
+    <button id="testAlert">Tester ModalAlert</button>
+    <button id="testConfirm">Tester ModalConfirm</button>
 </body>
 </html>
