@@ -1,0 +1,95 @@
+.modal-custom {
+  background-color: rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 200;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+.modal-custom-content{
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    
+    width: 600px;
+    max-width: 100%;
+
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal-content-without-x{
+    padding: 30px 50px;
+    padding-top: 0%;
+}
+
+.modal-custom-content button {
+  margin-top: 1rem;
+  padding: 0.5rem 1.2rem;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.modal-custom.show {
+    pointer-events: auto !important;
+    opacity: 1 !important;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.modal-buttons button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-buttons .modal-ok {
+    background-color: #28a745;
+    color: white;
+}
+
+.modal-buttons .modal-cancel {
+    background-color: #ccc;
+}
+
+.hidden {
+    display: none;
+}
+
+.modal-close-x {
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    font-size: 22px;
+    margin: 0% !important;
+    background-color: #ffffff !important;
+    color: #000000 !important;
+}
+
+.modal-custom.show .modal-custom-content {
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { transform: translateY(-10px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
